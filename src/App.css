@@ -1,0 +1,132 @@
+:root {
+    --primary-bg: #08111F;
+    --nav-bg: #005A5F;
+    --standout-color: #FF9800;
+    --logo-color: #0097A7;
+    --txt-color: #E7DBDB;
+}
+
+#App {
+    background-color: var(--primary-bg);
+    height: 100vh;
+    color: var(--txt-color);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* NavBar */
+.nav-bar {
+    background-color: var(--nav-bg);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    place-items: center;
+    height: 13%;
+    padding: 0 1rem;
+    color: var(--standout-color);
+}
+
+.nav-bar * {
+    transition: all .2s ease-in-out;
+}
+
+
+.nav-bar *:hover {
+    padding: .5rem;
+    transform: scale(1.1);
+}
+
+
+/* Main Content */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    width: 100%;
+}
+
+.main-content h1 {
+    width: 60%;
+    text-align: left;
+}
+
+
+.main-content .facts {
+    margin-top: 1rem;
+    max-width: 600px;
+}
+
+.main-content .facts li {
+    line-height: 1.5rem;
+    padding-block: .7rem;
+}
+
+.main-content .facts li::marker {
+    font-size: 2rem;
+    color: var(--logo-color);
+}
+
+.main-content * {
+    z-index: 2;
+}
+
+.main-content h1 {
+    padding: 1rem 0;
+}
+
+#main-img {
+    position: absolute;
+    width: 60vw;
+    height: 70%;
+    top: 30%;
+    right: 0;
+    z-index: 1;
+    filter: grayscale(50%);
+    opacity: .4;
+}
+
+/* Footer */
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+}
+
+#footer  * {
+    float: left;
+    font-size: .8rem;
+    color: var(--standout-color);
+}
+
+@media screen and (max-width: 500px) {
+    .nav-bar {
+        height: 10%;
+    }
+    .nav-bar * {
+    font-size: 1rem;
+    }
+
+    .nav-bar img {
+        width: 3rem;
+        height: 80%;
+    }
+
+    .main-content h1 {
+        width: 80%;
+    }
+
+    .main-content .facts {
+        margin: 1rem;
+    }
+
+}
+
+@media screen and (min-width: 500px) {    
+   .main-content {
+       font-size: 1.5rem;
+   } 
+
+}
